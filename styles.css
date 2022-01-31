@@ -7,28 +7,71 @@
 }
 
 body {
+  color: #fff;
+  line-height: 1.6;
+  letter-spacing: 1px;
 }
 
-section {
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 100px;
+}
+
+.parallax-group {
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+  z-index: -1;
+
+  position: relative;
+}
+
+/* .parallax-layer--1 {
   display: flex;
   justify-content: center;
   align-items: center;
 
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 30vh;
+
+  background-color: darkmagenta;
+  transform: translateZ(-100px) scale(2) translateY(-59%);
+  z-index: 2;
+} */
+
+.parallax-layer--2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: darkgreen;
+
+  transform: translateZ(-200px) scale(3);
+  z-index: 1;
 }
 
-h2 {
-  font-weight: bold;
-  font-size: 4.5rem;
-
-  padding: 0.5em 1.5em;
-
-  background-color: aliceblue;
-  border-radius: 5px;
+.content {
+  background-color: maroon;
 }
 
-section:nth-child(1) {
+.content p {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+/* Code from another parallax example, maybe try it again later */
+
+/* section:nth-child(1) {
   background-image: url('/images/curry.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,3 +92,4 @@ section:nth-child(3) {
 section:nth-child(4) {
   background-color: rgb(18, 18, 90);
 }
+ */
