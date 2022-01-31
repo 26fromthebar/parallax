@@ -12,6 +12,11 @@ body {
   letter-spacing: 1px;
 }
 
+h2 {
+  color: hsl(120, 85%, 75%);
+  font-size: 3rem;
+}
+
 .wrapper {
   height: 100vh;
   overflow-x: hidden;
@@ -20,7 +25,7 @@ body {
 }
 
 .parallax-group {
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
   transform-style: preserve-3d;
   z-index: -1;
@@ -28,23 +33,15 @@ body {
   position: relative;
 }
 
-/* .parallax-layer--1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.parallax-group-large {
+  height: 100vh;
+}
 
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 30vh;
+.parallax-group-small {
+  height: 50vh;
+}
 
-  background-color: darkmagenta;
-  transform: translateZ(-100px) scale(2) translateY(-59%);
-  z-index: 2;
-} */
-
-.parallax-layer--2 {
+.parallax-layer--1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,10 +50,51 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: darkgreen;
+  height: 50vh;
 
-  transform: translateZ(-200px) scale(3);
+  background: url('./images/curry.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transform: translateZ(-400px) scale(5) translateY(-57%);
+  z-index: 2;
+}
+
+.parallax-layer--2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background: url('./images/leonard.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transform: translateZ(-100px) scale(2) translateY(17%);
+  z-index: 1;
+}
+
+.parallax-layer--3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background: url('./images/giannis.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  /* transform: translateZ(-100px) scale(2) translateY(17%); */
   z-index: 1;
 }
 
