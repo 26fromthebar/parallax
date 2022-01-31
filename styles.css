@@ -6,9 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-}
-
 section {
   display: flex;
   justify-content: center;
